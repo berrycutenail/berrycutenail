@@ -2,7 +2,7 @@
 
 backend:
   name: git-gateway
-  branch: master
+  branch: master  # Changed to match your repository branch
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
@@ -10,34 +10,119 @@ backend:
     uploadMedia: 'Upload "{{path}}"'
     deleteMedia: 'Delete "{{path}}"'
 
-# Enable local backend in development
 local_backend: true
 
-# Media and Public Folders
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "content/english/_index.md"
+        label: "Homepage (English)"
+        name: "home"
+        fields:
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Content", name: "content", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Enable Button", name: "enable", widget: "boolean", default: true}
+                  - {label: "Button Label", name: "label", widget: "string"}
+                  - {label: "Button Link", name: "link", widget: "string"}
+
   - name: "blog"
-    label: "Blog"
+    label: "Blog Posts"
     folder: "content/english/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
-      
+
+  - name: "authors"
+    label: "Authors"
+    folder: "content/english/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title (Name)", name: "title", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Social Links"
+        name: "social"
+        widget: "list"
+        fields:
+          - {label: "Platform Name", name: "name", widget: "string"}
+          - {label: "Icon Class", name: "icon", widget: "string"}
+          - {label: "Profile Link", name: "link", widget: "string"}
+
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/english/_index.md"
-        label: "Home Page"
-        name: "home"
+      - file: "content/english/about/_index.md"
+        label: "About Page"
+        name: "about"
         fields:
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
           - {label: "Description", name: "description", widget: "text"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: false}
           - {label: "Body", name: "body", widget: "markdown"}
+      
+      - file: "content/english/contact/_index.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "sections"
+    label: "Sections"
+    files:
+      - file: "content/english/sections/call-to-action.md"
+        label: "Call to Action Section"
+        name: "call-to-action"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "content/english/sections/testimonial.md"
+        label: "Testimonial Section"
+        name: "testimonial"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "content", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "policy-pages"
+    label: "Policy Pages"
+    folder: "content/english/pages"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
