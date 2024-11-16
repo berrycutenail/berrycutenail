@@ -9,6 +9,40 @@
               {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full rounded") }}
             </div>
           {{ end }}
+
+          <!-- Video File -->
+          {{ with .Params.video }}
+            <div class="mb-10">
+              <video controls class="w-full rounded">
+                <source src="{{ . | relURL }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          {{ end }}
+
+          <!-- Video Embed -->
+          {{ with .Params.video_embed }}
+            <div class="mb-10">
+              <div class="relative w-full overflow-hidden rounded" style="padding-top: 56.25%">
+                {{ if strings.Contains . "youtube" }}
+                  <iframe
+                    class="absolute top-0 left-0 h-full w-full border-0"
+                    src="{{ replace . "watch?v=" "embed/" }}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                {{ else if strings.Contains . "vimeo" }}
+                  <iframe 
+                    class="absolute top-0 left-0 h-full w-full border-0"
+                    src="https://player.vimeo.com/video/{{ index (last 1 (split . "/")) 0 }}"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+
           <h1 class="h2 mb-4">
             {{ .Title }}
           </h1>
@@ -74,7 +108,7 @@
           {{ end }}
         </article>
       </div>
-
+      
       <!-- Related posts -->
       {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
       {{ $related = $related | shuffle | first 3 }}

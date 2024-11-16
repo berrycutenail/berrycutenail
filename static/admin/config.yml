@@ -49,11 +49,26 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "image", widget: "image"}
+      - label: "Video"
+        name: "video"
+        widget: "file"
+        required: false
+        media_folder: "static/videos"
+        public_folder: "/videos"
+        choose_url: true
+        media_library:
+          config:
+            multiple: false
       - {label: "Categories", name: "categories", widget: "list"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Video Embed URL"
+        name: "video_embed"
+        widget: "string"
+        required: false
+        hint: "Add YouTube or Vimeo URL (optional)"
 
   - name: "authors"
     label: "Authors"
