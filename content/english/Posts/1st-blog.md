@@ -1,12 +1,13 @@
 ---
-title: 1st blog
-description: my new blog
+title: this is a post
+description: test post
 date: 2024-11-15T08:46:34.289Z
-image:
+image: null
 categories:
-  - Posts
+  - category1
 author: jane
 tags:
-  - new
+  - tag1
 draft: false
 ---
+i﻿ like my website
