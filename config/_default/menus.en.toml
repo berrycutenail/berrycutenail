@@ -11,10 +11,10 @@ name = "About"
 url = "/about"
 weight = 2
 
-[[main]]
-name = "Elements"
-url = "/elements"
-weight = 3
+##[[main]]
+##name = "Elements"
+##url = "/elements"
+##weight = 3
 
 [[main]]
 weight = 4
@@ -25,10 +25,10 @@ parent = "Pages"
 name = "Blog"
 url = "/blog"
 
-[[main]]
-parent = "Pages"
-name = "Contact"
-url = "/contact"
+#[[main]]
+#parent = "Pages"
+#name = "Contact"
+#url = "/contact"
 
 [[main]]
 parent = "Pages"
@@ -36,20 +36,21 @@ name = "Authors"
 url = "/authors"
 
 [[main]]
-parent = "Pages"
+#parent = "Pages"
 name = "Categories"
 url = "/categories"
+weight = 3
 
 # footer menu
-[[footer]]
-name = "About"
-url = "/about"
-weight = 1
+#[[footer]]
+#name = "About"
+#url = "/about"
+#weight = 1
 
-[[footer]]
-name = "Elements"
-url = "/elements"
-weight = 2
+##[[footer]]
+##name = "Elements"
+##url = "/elements"
+##weight = 2
 
 [[footer]]
 name = "Privacy Policy"

@@ -5,9 +5,8 @@ banner:
   image: /images/banner.png
   button:
     enable: true
-    label: Get Started For Free
-    link: https://github.com/zeon-studio/hugoplate
+    label: my services
+    link: /categories/
 title: this is my home page
 description: my new site
 ---
-h﻿ello there
