@@ -22,8 +22,8 @@ name = "Pages"
 
 [[main]]
 parent = "Pages"
-name = "Blog"
-url = "/blog"
+name = "Posts"
+url = "/Posts"
 
 #[[main]]
 #parent = "Pages"

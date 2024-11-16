@@ -1,50 +1,45 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+  {{/*  {{ partial "page-header" . }}  */}}
 
+  <style>
+      .whatsapp-btn {
+        background-color: #25D366; /* WhatsApp green color */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Add padding */
+        border-radius: 16px; /* Rounded corners */
+        text-decoration: none; /* Remove underline */
+        display: inline-flex; /* Align icon and text */
+        align-items: center; /* Center icon vertically */
+    }
 
+    .whatsapp-btn:hover {
+        background-color: #128C7E; /* Darker green on hover */
+    }
+
+    .text-center {
+        text-align: center; /* Center the text */
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem; /* Margin bottom for spacing */
+    }
+    .fa-whatsapp {
+        margin-right: 1rem; /* Margin bottom for spacing */
+    }
+    
+  </style>
   <section class="section-sm">
-    <div class="container">
-      <div class="row">
-        <div class="md:col-10 lg:col-6 mx-auto">
-          <form action="{{ site.Params.contact_form_action }}" method="POST">
-            <div class="mb-6">
-              <label for="name" class="form-label">
-                Full Name <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                class="form-input"
-                placeholder="John Doe"
-                type="text" />
-            </div>
-            <div class="mb-6">
-              <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                class="form-input"
-                placeholder="john.doe@email.com"
-                type="email" />
-            </div>
-            <div class="mb-6">
-              <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-input"
-                placeholder="Message goes here..."
-                rows="8"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
+      <div class="container">
+          <div class="row justify-center"> <!-- Center the row -->
+              <div class="md:col-10 lg:col-6 mx-auto text-center"> <!-- Center the text -->
+                  <p class="mb-4">If you have any questions,</p> <!-- Add margin-bottom -->
+                  <p class="mb-4">feel free to reach out to me via WhatsApp!</p>
+                  <a href="https://wa.me/60133077267" class="btn whatsapp-btn" target="_blank">
+                      <i class="fab fa-whatsapp"></i> Let's Chat 
+                  </a>
+              </div>
+          </div>
       </div>
-    </div>
   </section>
 
   <!-- google map -->

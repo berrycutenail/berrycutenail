@@ -38,9 +38,9 @@ collections:
                   - {label: "Button Label", name: "label", widget: "string"}
                   - {label: "Button Link", name: "link", widget: "string"}
 
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "content/english/blog"
+  - name: "Posts"
+    label: "Posts"
+    folder: "content/english/Posts"
     create: true
     slug: "{{slug}}"
     fields:
