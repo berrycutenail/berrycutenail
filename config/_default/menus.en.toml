@@ -23,7 +23,7 @@ name = "Pages"
 [[main]]
 parent = "Pages"
 name = "Posts"
-url = "/Posts"
+url = "/posts"
 
 #[[main]]
 #parent = "Pages"
