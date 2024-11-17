@@ -3,7 +3,7 @@ title: manicure test post
 description: this is a test post for this website
 date: 2024-11-17T05:19:08.843Z
 image: https://images.pexels.com/photos/939836/pexels-photo-939836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
-video: https://www.youtube.com/shorts/_oawZl2lp6c?feature=share
+video: ""
 categories:
   - Basic Manicure
   - Cleaning
@@ -12,6 +12,7 @@ author: BCnail
 tags:
   - nov2024
 draft: false
+video_embed: https://youtube.com/shorts/_oawZl2lp6c?feature=shared
 ---
 ### Tips for Nail Care
 
