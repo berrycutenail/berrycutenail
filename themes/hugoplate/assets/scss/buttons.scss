@@ -1,15 +1,24 @@
 .btn {
-  @apply inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
+  @apply bg-[#FFB6C1] inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
 }
 
+
 .btn-sm {
-  @apply rounded-sm px-4 py-1.5 text-sm;
+  @apply bg-[#FFB6C1] rounded-sm px-4 py-1.5 text-sm;
 }
 
 .btn-primary {
-  @apply border-primary bg-primary dark:border-darkmode-primary dark:text-dark text-white dark:bg-darkmode-primary;
+  @apply border-[#FFB6C1] bg-[#FFB6C1] dark:border-[#FFB6C1] dark:text-[#FFB6C1] text-white dark:bg-[#FFB6C1];
+}
+
+.btn-post {
+  @apply border-[#FFB6C1] bg-[#e6e6e6] dark:border-[#FFB6C1] dark:text-[#FFB6C1] text-white dark:bg-[#FFB6C1];
 }
 
 .btn-outline-primary {
-  @apply border-dark text-dark hover:bg-dark dark:hover:text-dark bg-transparent hover:text-white dark:border-darkmode-primary dark:text-white dark:hover:bg-darkmode-primary;
+  @apply border-[#FFB6C1] text-[#08082b] hover:bg-[#FFB6C1] dark:hover:text-[#FFB6C1]  hover:text-white dark:border-[#FFB6C1] dark:text-white dark:hover:bg-[#FFB6C1];
+}
+
+.btn-outline-post {
+  @apply border-[#FFB6C1] text-[#08082b] hover:bg-[#FFB6C1] dark:hover:text-[#FFB6C1]  hover:text-white dark:border-[#FFB6C1] dark:text-white dark:hover:bg-[#FFB6C1];
 }

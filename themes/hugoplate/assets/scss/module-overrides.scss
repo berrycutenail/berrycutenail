@@ -7,28 +7,28 @@
 .share-icons {
   .share-link {
     @apply h-9 w-9 rounded leading-9;
-    @apply bg-primary hover:bg-primary dark:bg-darkmode-primary dark:hover:bg-darkmode-primary;
+    @apply bg-[#FFB6C1] hover:bg-[#FF69B4] dark:bg-[#FFDAB9] dark:hover:bg-[#FFB6C1]; // Light pink and hover effect
   }
   .share-icon svg {
-    @apply dark:fill-dark;
+    @apply dark:fill-[#E6E6FA]; // Soft lavender for dark mode
   }
 }
 
 // notice
 .notice {
-  @apply rounded-lg;
+  @apply rounded-lg bg-[#FFFDD0] dark:bg-[#2E2E2E]; // Creamy light for light mode and dark gray for dark mode
 }
 
 // tab
 .tab {
-  @apply border-border dark:border-darkmode-border overflow-hidden rounded-lg border;
+  @apply border-[#E6E6FA] dark:border-[#2E2E2E] overflow-hidden rounded-lg border;
   &-nav {
-    @apply border-border bg-theme-light dark:border-darkmode-border dark:bg-darkmode-theme-light pl-4;
+    @apply border-[#E6E6FA] bg-[#FFFDD0] dark:border-[#2E2E2E] dark:bg-[#2E2E2E] pl-4;
 
     &-item {
-      @apply text-dark dark:text-darkmode-dark px-8 text-lg #{!important};
+      @apply text-[#333333] dark:text-[#E6E6FA] px-8 text-lg #{!important};
       &.active {
-        @apply border-dark dark:border-darkmode-primary;
+        @apply border-[#FFB6C1] dark:border-[#FFDAB9]; // Light pink for active state
       }
     }
   }
@@ -41,15 +41,15 @@
 
 // accordion
 .accordion {
-  @apply border-border bg-theme-light dark:border-darkmode-border dark:bg-darkmode-theme-light mb-6 overflow-hidden rounded-lg border;
+  @apply border-[#E6E6FA] bg-[#FFFDD0] dark:border-[#2E2E2E] dark:bg-[#2E2E2E] mb-6 overflow-hidden rounded-lg border;
   &-header {
-    @apply text-dark dark:text-darkmode-dark;
+    @apply text-[#333333] dark:text-[#E6E6FA]; // Dark text for light mode and soft lavender for dark mode
   }
 }
 
 // cookie consent
 .cookie-box {
-  @apply rounded-lg #{!important};
+  @apply rounded-lg bg-[#FFFDD0] dark:bg-[#2E2E2E]; // Creamy light for light mode and dark gray for dark mode
 }
 
 // slider

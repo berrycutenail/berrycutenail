@@ -35,9 +35,9 @@
 
   <!-- theme switcher -->
   <script>
-    var darkMode = {{if eq site.Params.theme_default "dark"}}true{{else}}false{{end}};
+    var darkMode = {{if eq site.Params.theme_default "light"}}true{{else}}false{{end}};
 
-    {{ if eq site.Params.theme_default "system" }}
+    {{ if eq site.Params.theme_default "light" }}
     if (window.matchMedia("(prefers-color-scheme: dark)").matches){darkMode = true}
     {{ end }}
 

@@ -1,5 +1,5 @@
 .bg-gradient {
-  @apply dark:from-darkmode-theme-light dark:to-darkmode-body bg-gradient-to-b from-[rgba(249,249,249,1)] from-[0.53%] to-white to-[83.28%];
+  @apply dark:from-darkmode-theme-light dark:to-darkmode-body bg-gradient-to-b from-[rgba(178, 230, 230, 1)] from-[0.53%] to-[#B2E6B2] to-[83.28%]; // Using pastel mint green for the gradient
 }
 
 .rounded-sm {
@@ -16,5 +16,5 @@
 }
 
 .shadow {
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05); // Keeping the shadow as is
 }

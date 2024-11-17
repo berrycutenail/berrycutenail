@@ -1,4 +1,4 @@
-<div class="bg-body dark:bg-darkmode-body">
+<div class="bg-body dark:bg-darkmode-body border border-gray-300 rounded-lg p-4 mb-6 shadow-lg">
   {{ $image:= .Params.image }}
   {{ if $image }}
     {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mb-6 w-full rounded") }}
@@ -31,7 +31,7 @@
     </ul>
   {{ end }}
   <p class="mb-6">{{ .Summary }}</p>
-  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+  <a class="btn-post btn-outline-post btn-sm" href="{{ .RelPermalink }}">
     {{ T "read_more" }}
   </a>
 </div>
