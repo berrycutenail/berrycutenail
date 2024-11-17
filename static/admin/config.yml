@@ -39,61 +39,61 @@ collections:
                   - {label: "Button Link", name: "link", widget: "string"}
 
   - name: "posts"
-  label: "Posts"
-  folder: "content/english/posts"
-  create: true
-  slug: "{{slug}}"
-  fields:
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
-    - {label: "Description", name: "description", widget: "text"}
-    - {label: "Date", name: "date", widget: "datetime"}
-    - {label: "Image", name: "image", widget: "image", required: false}
-    - label: "Video"
-      name: "video"
-      widget: "file"
-      required: false
-      media_folder: "static/videos"
-      public_folder: "/videos"
-      choose_url: true
-      media_library:
-        config:
-          multiple: false
-    - label: "Categories"
-      name: "categories"
-      widget: "list"
-      allow_add: true
-      allow_remove: true
-      default: []
-      field:
-        label: "Select Categories"
-        name: "category"
-        widget: "select"
-        options:
-          - "Basic Manicure"
-          - "French Manicure"
-          - "Gel Manicure"
-          - "Acrylic Manicure"
-          - "Cleaning"
-          - "Spa Manicure"
-          - "Nail Art"
-          - "Polish Change"
-          - "Basic Pedicure"
-          - "Spa Pedicure"
-          - "Gel Pedicure"
-          - "Aromatherapy Pedicure"
-          - "Paraffin Pedicure"
-          - "Nail Art for Toes"
-          - "Moisturizing Treatments"
-    - {label: "Author", name: "author", widget: "string"}
-    - {label: "Tags", name: "tags", widget: "list"}
-    - {label: "Draft", name: "draft", widget: "boolean", default: false}
-    - {label: "Body", name: "body", widget: "markdown"}
-    - label: "Video Embed URL"
-      name: "video_embed"
-      widget: "string"
-      required: false
-      hint: "Add YouTube or Vimeo URL (optional)"
+    label: "Posts"
+    folder: "content/english/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Title", name: "meta_title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - label: "Video"
+        name: "video"
+        widget: "file"
+        required: false
+        media_folder: "static/videos"
+        public_folder: "/videos"
+        choose_url: true
+        media_library:
+          config:
+            multiple: false
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        allow_add: true
+        allow_remove: true
+        default: []
+        field:
+          label: "Select Categories"
+          name: "category"
+          widget: "select"
+          options:
+            - "Basic Manicure"
+            - "French Manicure"
+            - "Gel Manicure"
+            - "Acrylic Manicure"
+            - "Cleaning"
+            - "Spa Manicure"
+            - "Nail Art"
+            - "Polish Change"
+            - "Basic Pedicure"
+            - "Spa Pedicure"
+            - "Gel Pedicure"
+            - "Aromatherapy Pedicure"
+            - "Paraffin Pedicure"
+            - "Nail Art for Toes"
+            - "Moisturizing Treatments"
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Video Embed URL"
+        name: "video_embed"
+        widget: "string"
+        required: false
+        hint: "Add YouTube or Vimeo URL (optional)"
 
   - name: "authors"
     label: "Authors"
