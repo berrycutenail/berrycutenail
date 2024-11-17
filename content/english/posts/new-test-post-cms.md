@@ -3,8 +3,8 @@ title: new test post cms
 description: cms post
 date: 2024-11-16T04:27:24.887Z
 categories:
-  - c1
-author: dale
+  - Basic Manicure French Manicure Gel Manicure Nail Art
+author: "dale "
 tags:
   - 16/11/2024
 draft: false
