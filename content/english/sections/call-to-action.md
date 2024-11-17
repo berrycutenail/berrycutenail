@@ -6,7 +6,7 @@ description: "Experience the future of web development with Hugoplate and Hugo. 
 button:
   enable: true
   label: "My Services"
-  link: "/category/"
+  link: "/services/"
 
 # don't create a separate page
 _build:

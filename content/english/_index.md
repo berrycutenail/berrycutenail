@@ -6,7 +6,7 @@ banner:
   button:
     enable: true
     label: my services
-    link: /categories/
+    link: /services/
 title: this is my home page
 description: my new site
 ---
