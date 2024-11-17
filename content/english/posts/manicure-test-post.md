@@ -12,7 +12,7 @@ author: BCnail
 tags:
   - nov2024
 draft: false
-video_embed: https://www.youtube.com/shorts/_oawZl2lp6c
+video_embed: https://www.youtube.com/watch?v=bHFjbEhGv0s
 ---
 ### Tips for Nail Care
 
