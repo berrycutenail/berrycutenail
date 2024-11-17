@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
+
   <section class="section-sm">
     <div class="container">
       <div class="row justify-center">
@@ -10,14 +11,7 @@
 
             {{ if .Params.video_embed }}
               <div class="video-embed">
-                {{ $url := .Params.video_embed }}
-                {{ if or (hasPrefix $url "https://www.youtube.com") (hasPrefix $url "https://youtu.be") }}
-                  {{/*  {{ $videoID := (regexReplaceAll "(?i)https?://(?:www\\.)?youtube\\.com/watch\\?v=([\\w-]+)|https?://(?:www\\.)?youtu\\.be/([\\w-]+)" $url "$1$2") }}  */}}
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $videoID }}" frameborder="0" allowfullscreen></iframe>
-                {{ else if or (hasPrefix $url "https://vimeo.com") }}
-                  {{/*  {{ $videoID := (regexReplaceAll "(?i)https?://(?:www\\.)?vimeo\\.com/(\\d+)" $url "$1") }}  */}}
-                  <iframe src="https://player.vimeo.com/video/{{ $videoID }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-                {{ end }}
+                <iframe src="{{ .Params.video_embed }}" frameborder="0" allowfullscreen></iframe>
               </div>
             {{ end }}
           </div>
