@@ -8,6 +8,12 @@
         <div class="lg:col-10">
           <div class="content">
             {{ .Content }}
+
+            {{ if .Params.video_embed }}
+              <div class="video-embed">
+                {{ .Params.video_embed | safeHTML }}
+              </div>
+            {{ end }}
           </div>
         </div>
       </div>
